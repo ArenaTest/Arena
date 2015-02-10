@@ -41,7 +41,7 @@ public class Fire : MonoBehaviour
 
 		void Start ()
 		{
-				Gun = gameObject.transform.parent.gameObject;
+				//Gun = gameObject.transform.parent.gameObject;
 				Gun.animation.AddClip (reload, "Reload");
 				//Gun.animation.
 				Flash.active = false;

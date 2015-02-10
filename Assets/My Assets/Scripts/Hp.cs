@@ -23,12 +23,11 @@ public class Hp : MonoBehaviour {
 	}
 	public void ApplyDamage(float damage)
 	{
-		Debug.Log (damage.ToString());
+
 		//if (networkView.isMine) {
 						if (heals > 0.0f)
 			{
 								heals -= damage;
-				Debug.Log ("AAAAAAAAAAAAAAAAAA!!!");
 			}
 				else //if (heals <= 0.0f) {
 		{
@@ -38,7 +37,6 @@ public class Hp : MonoBehaviour {
 								if (Spawner != null) {
 										if (_spawnType == SpawnType.SpawnOnDeath || _spawnType == SpawnType.SpawnOnCount) {
 												Spawner.SendMessage ("Spawn");
-					Debug.Log("Spawn send");
 										} else
 			if (_spawnType == SpawnType.Waves) {
 												Spawner.SendMessage ("OnDeath");

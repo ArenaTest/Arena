@@ -36,6 +36,7 @@ public class Server_Client : MonoBehaviour {
 		player0.transform.GetComponentInChildren<Camera> ().camera.enabled = true;
 		player0.transform.GetComponentInChildren<AudioListener> ().enabled = true;
 		player0.GetComponent<Hp> ().Spawner = Spawner;
+		this.enabled = false;
 	}
 	void OnConnectedToServer()
 	{
@@ -44,6 +45,7 @@ public class Server_Client : MonoBehaviour {
 		player0.transform.GetComponentInChildren<Camera> ().camera.enabled = true;
 		player0.transform.GetComponentInChildren<AudioListener> ().enabled = true;
 		player0.GetComponent<Hp> ().Spawner = Spawner;
+		this.enabled = false;
 	}
 	void OnDisconnectedFromServer(NetworkDisconnection info)
 	{

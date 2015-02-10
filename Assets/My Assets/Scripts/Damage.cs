@@ -7,7 +7,6 @@ public class Damage : MonoBehaviour {
 	void OnTriggerStay(Collider coll)
 	{
 		if (coll.tag == "Player") {
-			Debug.Log("DAMAGE");
 			coll.SendMessageUpwards("ApplyDamage", 100, SendMessageOptions.DontRequireReceiver);
 		}
 	}
